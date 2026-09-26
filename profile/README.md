@@ -26,14 +26,14 @@ Valance is an experimental, hardware-agnostic UI framework. It pulls apart three
         MESH                     NEXUS                     PORT
   "What does the UI mean?"   "What does the app do?"   "Where does it appear?"
             │                         │                         │
-   MPRX describes intent  ──▶  NEXUS resolves behavior  ──▶  PORT renders it
+   MPRX describes intent  ──▶  NEXUS resolves behavior  ──▶  PORT realizes it
 ```
 
 | Repo | What it is | Built with |
 |---|---|---|
 | [**Mesh**](https://github.com/ValanceX/Mesh) | The UI language toolchain: the **MPRX** grammar, parser, compiler, and language server | Rust · Tree-sitter · WASM |
 | [**Nexus**](https://github.com/ValanceX/Nexus) | The application core: state, commands, services, events, and device capabilities, with no rendering | TypeScript · Effect |
-| [**Port**](https://github.com/ValanceX/Port) | The rendering layer: turns compiled UI into DOM, Canvas, or device output | TypeScript |
+| [**Port**](https://github.com/ValanceX/Port) | Target realization: lowers compiled UI into a target-native implementation (browser, native, GPU, device) | TypeScript |
 
 Each repo stands on its own, with its own docs and history. They connect only through stable contracts (the MESH Semantic IR and runtime adapters), never through each other's internals.
 
